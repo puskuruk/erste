@@ -46,7 +46,7 @@ function decorateEvents(comp) {
 
     let events = {};
 
-    if ('events' in prototype && prototype.events) {
+    if (typeof prototype.events !== "undefined") {
         events = prototype.events;
     }
 
@@ -83,7 +83,7 @@ export default class ComponentManager {
 
         this.getUid = getUid
         this.createElement = createElement
-    
+
     }
 
     handleEvent(e) {
@@ -221,7 +221,7 @@ export default class ComponentManager {
     }
 
     static getInstance() {
-        if (!ComponentManager.instance) 
+        if (!ComponentManager.instance)
             ComponentManager.instance = new ComponentManager()
 
         return ComponentManager.instance
