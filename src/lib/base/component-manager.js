@@ -30,7 +30,8 @@ const events = [
     'swipeTop',
     'swipeRight',
     'swipeBottom',
-    'swipeLeft'
+    'swipeLeft',
+    'submit',
 ];
 
 const nonBubblingEventsMap = {
